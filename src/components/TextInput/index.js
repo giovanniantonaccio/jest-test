@@ -14,6 +14,9 @@ export default function TextInput({
   const { register, errors, clearError, schema } = properties;
   return (
     <TextField
+      inputProps={{
+        'data-testid': 'text-field',
+      }}
       error={errors[field] && true}
       helperText={errors[field] && errors[field].message}
       name={field}
